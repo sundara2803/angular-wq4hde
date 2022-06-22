@@ -1,0 +1,31 @@
+<div style="background-color:pink;">
+  <hello name="{{ name }}"></hello>
+  <div class="center-div">
+    <label>given ml</label>
+    <input [(ngModel)]="givenMillis" />
+    <p>ml</p>
+    <br />
+    <button (click)="calculate()">Calculate</button>
+    <br />
+    <button (click)="clear()">clear</button>
+  </div>
+
+  <div class="center-div">
+    <p>
+      {{
+        outputMg
+          ? outputMg + ' mg' + outputG + ' g'
+          : 'Give ml to calculate mg & g'
+      }}
+    </p>
+  </div>
+
+  <div class="center-div">
+    <p>For Reference</p>
+    <ul>
+      <li>ml - millilitre</li>
+      <li>mg - microgram</li>
+      <li>g - gram</li>
+    </ul>
+  </div>
+</div>
